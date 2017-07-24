@@ -13,4 +13,6 @@ const chalk = require('chalk');
 
 console.log(chalk.blue('Hello world!'));
 
-console.log("It is")
+let date = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+
+console.log("It is " + date);
