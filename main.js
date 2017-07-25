@@ -2,10 +2,10 @@ const moment = require('moment');
 moment().format();
 const chalk = require('chalk');
 
-let date = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
-let dayNumber = moment().format("DDD") + "th";
-let daylightSave = moment("dddd, MMMM Do YYYY, h:mm:ss a").isDST();
-let leapYear = moment("dddd, MMMM Do YYYY, h:mm:ss a").isLeapYear();
+let date = moment();
+let dayNumber = moment().format("DDDo");
+let daylightSave = moment().isDST();
+let leapYear = moment().isLeapYear();
 let startOfDay = moment().startOf('day');
 let difference = moment().diff(startOfDay, 'seconds');
 
