@@ -1,16 +1,12 @@
 const moment = require('moment');
 moment().format();
-
 const chalk = require('chalk');
-
-console.log(chalk.blue('Hello world!'));
 
 let date = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
 let dayNumber = moment().format("DDD") + "th";
-let totalSeconds = moment.duration().asSeconds();
 let daylightSave = moment("dddd, MMMM Do YYYY, h:mm:ss a").isDST();
 let leapYear = moment("dddd, MMMM Do YYYY, h:mm:ss a").isLeapYear();
-let startOfDay = moment().clone().startOf('day');
+let startOfDay = moment().startOf('day');
 let difference = moment().diff(startOfDay, 'seconds');
 
 let leapResult;
@@ -23,7 +19,7 @@ function leap() {
 };
 
 let dlsResult;
-function dsl() {
+function dls() {
   if(daylightSave === false) {
     dlsResult = "isn't";
   } else {
@@ -32,7 +28,7 @@ function dsl() {
 };
 
 leap(leapYear);
-dsl(daylightSave);
+dls(daylightSave);
 
 console.log("It is " + chalk.blue(date) + ".");
 console.log("It is the " + chalk.magenta(dayNumber) + " day of the year.");
